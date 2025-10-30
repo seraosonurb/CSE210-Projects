@@ -26,8 +26,9 @@ class Program
             {
                 break;
             }
-            
+
         }
+        
         // for loop that counts and sums the numbers in numbers list
         foreach (int number in numbers)
         {
