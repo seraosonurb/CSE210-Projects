@@ -7,25 +7,83 @@ class Program
         Console.Write("Enter your grade: ");
         string number = Console.ReadLine();
         int grade = int.Parse(number);
+
+        string letter = "";
+        string sign = "";
+
         if (grade >= 90)
         {
-            Console.Write("A");
+            letter = "A";
         }
         else if (grade >= 80)
         {
-            Console.Write("B");
+            int total = grade % 10;
+            if (total >= 7)
+            {
+                sign = "+";
+                letter = "B";
+            }
+            else if (total <= 3)
+            {
+                sign = "-";
+                letter = "B";
+            }
+            else
+            {
+                sign = "";
+                letter = "B";
+            }
         }
         else if (grade >= 70)
         {
-            Console.Write("C");
+            int total = grade % 10;
+            if (total >= 7)
+            {
+                sign = "+";
+                letter = "C";
+            }
+            else if (total <= 3)
+            {
+                sign = "-";
+                letter = "C";
+            }
+            else
+            {
+                sign = "";
+                letter = "C";
+            }
         }
         else if (grade >= 60)
         {
-            Console.Write("D");
+            int total = grade % 10;
+            if (total >= 7)
+            {
+                sign = "+";
+                letter = "D";
+            }
+            else if (total <= 3)
+            {
+                sign = "-";
+                letter = "D";
+            }
+            else
+            {
+                sign = "";
+                letter = "D";
+            }
         }
         else
         {
-            Console.Write("F");
+            letter = "F";
+        }
+
+        if (grade >= 70)
+        {
+            Console.Write($"Congratulations! Your grade is {sign}{letter}, you passed!");
+        }
+        else
+        {
+            Console.Write($"Your grade is {sign}{letter}. Better luck next time.");
         }
     }   
 }
