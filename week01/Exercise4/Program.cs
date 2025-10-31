@@ -67,5 +67,13 @@ class Program
             }
         }
         Console.WriteLine($"The samallest positive number is {smallestPositive}");
+
+        numbers.Sort();
+        Console.WriteLine("The sorted list is: ");
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            Console.WriteLine(numbers[i]);    
+        }
+        
     }
 }
